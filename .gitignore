@@ -1,0 +1,5 @@
+outouts/
+node_modules/
+more_tests/
+
+*.mp4
