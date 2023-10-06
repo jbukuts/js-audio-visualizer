@@ -4,14 +4,18 @@
   "description": "",
   "main": "index.js",
   "type": "module",
+  "engines" : { 
+    "npm" : ">=8.6.0",
+    "node" : ">=18.0.0"
+  },
   "scripts": {
-    "start": "node --experimental-worker index.js",
+    "start": "node --experimental-worker bin.js",
+    "color-test": "node color-test.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "jbukuts",
   "license": "ISC",
   "dependencies": {
-    "canvas": "github:dteh/node-canvas#ISSUE-1394",
     "ffmpeg-static": "^5.2.0",
     "fluent-ffmpeg": "^2.1.2"
   }
