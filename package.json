@@ -1,22 +1,54 @@
 {
-  "name": "js-visualizer",
+  "name": "wav-viz",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "type": "module",
-  "engines" : { 
-    "npm" : ">=8.6.0",
-    "node" : ">=18.0.0"
+  "bin": "bin.js",
+  "imports": {
+    "#wav-parser": [
+      "./src/wav-parser/index.js"
+    ],
+    "#frame-draw": [
+      "./src/frame-draw/index.js"
+    ],
+    "#image-files": [
+      "./src/image-files/index.js"
+    ],
+    "#helpers": [
+      "./src/helpers.js"
+    ],
+    "#defaults": [
+      "./src/defaults.js"
+    ],
+    "#themes": [
+      "./src/themes.js"
+    ],
+    "#workers/*": [
+      "./src/workers/*"
+    ]
+  },
+  "engines": {
+    "npm": ">=8.6.0",
+    "node": ">=18.0.0"
   },
   "scripts": {
     "start": "node --experimental-worker bin.js",
     "color-test": "node color-test.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
   },
   "author": "jbukuts",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^5.3.0",
     "ffmpeg-static": "^5.2.0",
-    "fluent-ffmpeg": "^2.1.2"
+    "fluent-ffmpeg": "^2.1.2",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "prettier": "^3.1.0"
   }
 }

@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "module": "ESNext",
+        "target": "ES6",
+        "rootDir": "./",
+        "baseUrl": "",
+        "moduleResolution": "node",
+        "paths": {
+            "#wav-parser": ["src/wav-parser/index.js"],
+            "#image-files": ["src/image-files/index.js"],
+            "#frame-draw": ["src/frame-draw/index.js"],
+            "#helpers": ["src/helpers.js"],
+            "#defaults": ["src/defaults.js"],
+            "#themes": ["src/themes.js"],
+            "#workers/*": ["src/workers/*"]
+        }
+    },
+    "exclude": ["node_modules"]
+}
