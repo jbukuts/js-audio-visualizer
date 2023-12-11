@@ -1,4 +1,6 @@
 import os from 'os';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 
 const defaults = {
   TEMP_DIR: os.tmpdir(),
@@ -8,7 +10,7 @@ const defaults = {
   DEF_FRAME_HEIGHT: 720,
   DEF_FRAME_WIDTH: 1280,
   DEF_THREADING: os.cpus().length,
-  SRC_PATH: import.meta.url
+  SRC_PATH: dirname(fileURLToPath(import.meta.url))
 };
 
 export default defaults;

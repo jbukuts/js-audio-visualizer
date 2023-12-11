@@ -1,6 +1,7 @@
 import { Worker } from 'worker_threads';
 import themes from '#themes';
 import defaults from '#defaults';
+import path from 'path';
 
 const { warn } = themes;
 
@@ -78,7 +79,7 @@ export default async function drawFrames(options) {
 
   const digit_len = total_frames.toString().length;
   const workers = [...new Array(worker_max)].map(() => {
-    return new Worker(new URL('workers/draw-worker.js', SRC_PATH).pathname);
+    return new Worker(path.join(SRC_PATH, 'workers/draw-worker.js'));
   });
 
   const startWorker = (worker, frame_number) => {
