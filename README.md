@@ -5,7 +5,7 @@ Minimal dependency CLI tool for creating amplitude audio visualization videos of
 ## Installation
 
 ```bash
-npm install https://github.com/jbukuts/js-audio-visualizer.git
+npm install -g https://github.com/jbukuts/js-audio-visualizer.git
 ```
 
 ## Use
