@@ -46,6 +46,17 @@ export default class ImageFile {
   drawPoint() {}
 
   /**
+   * Draw line on the image
+   *
+   * @param {Object} options
+   * @param {number} options.x1
+   * @param {number} options.y1
+   * @param {number} options.x2
+   * @param {number} options.y2
+   */
+  drawLine() {}
+
+  /**
    * Create byte buffer representing image file
    *
    * @method toFileBuffer

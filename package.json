@@ -4,7 +4,9 @@
   "description": "",
   "type": "module",
   "bin": "bin.js",
-  "files": ["src"],
+  "files": [
+    "src"
+  ],
   "imports": {
     "#wav-parser": [
       "./src/wav-parser/index.js"

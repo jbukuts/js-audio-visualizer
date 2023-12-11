@@ -4,8 +4,14 @@ import defaults from '#defaults';
 
 const { warn } = themes;
 
-const { DEF_FRAME_HEIGHT, DEF_FRAME_WIDTH, DEF_FRAME_RATE, DEF_IMAGE_FILE, DEF_THREADING } =
-  defaults;
+const {
+  DEF_FRAME_HEIGHT,
+  DEF_FRAME_WIDTH,
+  DEF_FRAME_RATE,
+  DEF_IMAGE_FILE,
+  DEF_THREADING,
+  SRC_PATH
+} = defaults;
 
 /**
  * @typedef {Object} VideoData
@@ -72,7 +78,7 @@ export default async function drawFrames(options) {
 
   const digit_len = total_frames.toString().length;
   const workers = [...new Array(worker_max)].map(() => {
-    return new Worker('./src/workers/draw-worker.js');
+    return new Worker(new URL('workers/draw-worker.js', SRC_PATH).pathname);
   });
 
   const startWorker = (worker, frame_number) => {

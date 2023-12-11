@@ -7,7 +7,8 @@ const defaults = {
   DEF_FRAME_RATE: 24,
   DEF_FRAME_HEIGHT: 720,
   DEF_FRAME_WIDTH: 1280,
-  DEF_THREADING: os.cpus().length
+  DEF_THREADING: os.cpus().length,
+  SRC_PATH: import.meta.url
 };
 
 export default defaults;
